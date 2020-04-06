@@ -42,6 +42,7 @@
 
                     <label for="state">State</label>
                     <select name="stateselect" id="state">
+                        <option value="" disabled selected>Choose State</option>
                         <option value="California">California</option>
                         <option value="Oregon">Oregon</option>
                         <option value="Other">One of the other 48 states</option>
@@ -54,21 +55,18 @@
             <fieldset>
                 <legend><strong>Newsletter</strong></legend>
                     <p>Select the newsletters you would like to recieve</p>
-                        <input type="checkbox" name="newsoption" id="html" value="HTMLnews">
-                        <label for="html">HTML News</label>
                         
-                        <input type="checkbox" name="newsoption" id="css" value="CSSnews">
-                        <label for="css">CSS News</label>
+                        <label for="html"><input type="checkbox" name="newsoption" id="html" value="HTMLnews">HTML News</label>
+                           
+                        <label for="css"><input type="checkbox" name="newsoption" id="css" value="CSSnews">CSS News</label>
 
-                        <input type="checkbox" name="newsoption" id="js" value="JSnews">
-                        <label for="js">JS News</label>
+                        <label for="js"><input type="checkbox" name="newsoption" id="js" value="JSnews">JS News</label>
                     
                     <p>Newsletter format</p>
-                        <input type="radio" name="formatoption" id="HTMLformat" value="HTMLvalue">
-                        <label for="HTMLformat">HTML</label>
-
-                        <input type="radio" name="formatoption" id="plaintextformat" value="plaintextvalue">
-                        <label for="plaintextformat">Plain Text</label>
+                        
+                        <label for="HTMLformat"><input type="radio" name="formatoption" id="HTMLformat" value="HTMLvalue">HTML</label>
+      
+                        <label for="plaintextformat"><input type="radio" name="formatoption" id="plaintextformat" value="plaintextvalue">Plain Text</label>
                     
                     <p>Other topics you'd like to hear about</p>
                         <label for="topics" class="hideLabel">other topics you'd like to hear about</label>
@@ -77,11 +75,12 @@
                     <label for="signup" class="hideLabel">Sign Up</label>
                     <input type="submit" name="submitbutton" id="signup" value="Sign Up">
             </fieldset>
-            <p>Copyright The Code Review</p>
         </form>
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>Copyright The Code Review</p>
+    </footer>
 
 </body>
 </html>

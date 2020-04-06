@@ -7,7 +7,7 @@
 
  /* margin 0 declarations & width declarations*/
 
- h1, fieldset, section {
+ h1, section {
    margin: 0 auto; 
  }
 
@@ -43,7 +43,14 @@ h2 {
 
 p, label {
   font-family: 'Montserrat', sans-serif;
-  color: #959595;
+}
+
+section p, footer p, #state {
+    color: #959595;
+} 
+
+label, fieldset p {
+  color: #262626;
 }
 
 label, textarea::placeholder {
@@ -73,6 +80,10 @@ hr {
   margin-bottom: 1.5em
 }
 
+form hr {
+  margin: 1.5em 1em; 
+}
+
 hr#thickline {
   height: .3em;
   margin: 0 0 -1em 0;
@@ -82,6 +93,7 @@ hr#thickline {
 
 fieldset {
   border: none;
+  margin: 0 -1.8em 0 .1em;
 }
 
 legend {
@@ -90,19 +102,97 @@ legend {
 
 label {
   font-size: .9em;
-  padding: .7em 0
+  padding: .7em 0;
 }
 
 ::placeholder {
   font-size: .7em;
   text-align: right;
-  opacity: .3; 
+  opacity: .6; 
+  padding-right: 1em;
+  color: #595959;
 }
 
 textarea::placeholder {
   font-size: .8em;
 }
 
+input[type=text], input[type=email], input[type=tel], select, textarea, #signup {
+  width: 100%;  
+}
+
+input[type=text], input[type=email], input[type=tel], select, #zip {
+  height: 2.5em;
+}
+
+ input[type=text], input[type=email], input[type=tel], select, #zip, textarea, #signup {
+  border: 0 solid;
+  border-radius: 4px;
+
+}
+
+input[type=text], input[type=email], input[type=tel], select, #zip, textarea {
+    background-color: #e6e6e6;
+}
+
+input:focus,   /* got this suggestion from stackoverflow */
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input:hover, textarea:hover {
+  border: 1.5px solid #ffffcc;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, select:focus, #zip:focus {
+  transition: height .8s ease-in-out;
+  height: 3.5em;
+  background-color: #ffffcc;
+}
+
+#zip {
+  width: 45%;
+}
+
+input[type=checkbox], input[type=radio] {
+  margin-right: 1em;
+}
+
+textarea {
+  resize: none;
+  height: 6.5em;
+}
+
+textarea:focus {
+    transition: background-color 1s ease-in-out;
+    background-color: #99ffcc;
+}
+
+#signup {
+  background-color: #00e6b8;
+  color: #f2f2f2;
+  margin: 2em auto .5em;
+  height: 3em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* hiding number arrows from W3schools */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hiding number arrows for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* hiding elements for mobile */
 .hideLabel {
   display: none;
 }
@@ -110,5 +200,10 @@ textarea::placeholder {
 /* footer styles */
 
 footer {
-  height: 25vh;
+  height: 35vh;
+}
+
+footer p {
+  text-align: center;
+  font-style: italic;
 }
