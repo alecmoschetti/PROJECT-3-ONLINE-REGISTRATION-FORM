@@ -207,3 +207,65 @@ footer p {
   text-align: center;
   font-style: italic;
 }
+
+/* media query */
+@media (min-width: 768px) {
+
+section, main {
+    width: 60%;
+  }
+
+main {
+    margin: 0 auto;
+  }
+  
+section {
+    margin-top: 1em;
+  }
+
+section p {
+    font-size: .70937em;
+    margin-top: -.8em;
+    width: 80%;
+    padding-bottom: .7em;
+  }
+
+fieldset {
+    padding-left: 0;
+  }
+
+  legend {
+    padding: 0;
+  }
+
+.contact_form {
+  display: inline;
+}
+
+.contact_form input, select {
+  max-width: 73%;
+  float: right;
+  margin: .96em -1em .96em 0;
+}
+
+.contact_form label {
+  float: left;
+  width: 27%;
+  margin: 1.201em 0;
+}
+
+#zip {
+  width: 30%;
+  float: left;
+  margin-left: 1em;
+}
+
+form hr {
+  margin-left: -.05em;
+  min-width: 110%;
+}
+
+.newsletter {
+  display: flex;
+}
+}
